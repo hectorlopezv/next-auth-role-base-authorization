@@ -12,6 +12,9 @@ export default function ClientPage() {
       redirect("/api/auth/signin?callbackUrl=/client");
     },
   });
+  // if(session?.user.role !=="admin" && session?.user.role !=="manager"){
+  //   return <h1>Access denied</h1>
+  // }
   if (!session?.user) {
     return <div>no User</div>;
   }
